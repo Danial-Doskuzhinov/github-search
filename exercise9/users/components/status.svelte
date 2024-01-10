@@ -1,5 +1,6 @@
-<script>
-    export let userData;
+<script lang="ts">
+  import{User} from '../src/App.svelte'
+    export let userData :User|null;
 </script>
 
 <section class="status-all">

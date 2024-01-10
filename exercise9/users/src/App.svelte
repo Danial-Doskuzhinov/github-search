@@ -1,9 +1,18 @@
-<script>
+<script context="module" lang="ts">
+  export type User ={
+    name :string ,
+    login :string,
+    location:string,
+    following:number,
+    followers:number,
+    twitter_username:string,
+    public_repos:number,
+  }
   import Main from '../components/main.svelte'
   import Footer from '../components/footer.svelte';
   import Status from '../components/status.svelte';
 	  let username = '';
-	  let userData =null;
+	  let userData:User|null=null;
 	
 	  async function func() {
 		try{
@@ -12,7 +21,16 @@
 		if (!response.ok) {
 		  await Promise.reject(new Error(`Error 37 reject`));
 		}
-	  userData = jsonn;
+	  
+    userData ={
+      name :jsonn.name ,
+    login :jsonn.login,
+    location:jsonn.location,
+    following:jsonn.following,
+    followers:jsonn.followers,
+    twitter_username:jsonn.twitter_username,
+    public_repos:jsonn.public_repos,
+    }
 	  } catch (error) {
 	  otherfunc()
 	}
