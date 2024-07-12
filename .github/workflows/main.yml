@@ -39,11 +39,11 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-        working-directory: ./github-search/exercise9/users+ts
+        working-directory: ./exercise9/users+ts
 
       - name: Build
         run: npm run build
-        working-directory: ./github-search/exercise9/users+ts
+        working-directory: ./exercise9/users+ts
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -52,7 +52,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload dist folder
-          path: './github-search/exercise9/users+ts/dist'
+          path: './exercise9/users+ts/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
