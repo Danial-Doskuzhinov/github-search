@@ -1,4 +1,4 @@
-erimport { defineConfig } from 'vite'
+import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 
 // https://vitejs.dev/config/
