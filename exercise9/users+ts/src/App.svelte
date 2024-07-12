@@ -5,10 +5,6 @@
   import Status from '../components/status.svelte';
 	  let username = '';
 	  let userData:User|null=null;
-  
-    
-
-
 	  async function func() {
 		try{
        const headers =new Headers();
@@ -73,7 +69,8 @@
 </body>
 <style>
   body{
-    padding: 9rem 22.19rem ;
+    margin-left: 20rem;
+    margin-top: 5rem;
    background: #F6F8FF; 
 }
 .main{
